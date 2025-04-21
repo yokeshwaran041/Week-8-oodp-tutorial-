@@ -1,0 +1,33 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+template <typename T>
+class Storage {
+private:
+    T value;
+public:
+    void setValue(T val) {
+        value = val;
+    }
+    
+    void displayValue() {
+        cout << "Stored value: " << value << endl;
+    }
+};
+
+int main() {
+    Storage<int> intStorage;
+    intStorage.setValue(42);
+    intStorage.displayValue();
+
+    Storage<float> floatStorage;
+    floatStorage.setValue(3.14f);
+    floatStorage.displayValue();
+
+    Storage<string> stringStorage;
+    stringStorage.setValue("Hello, C++!");
+    stringStorage.displayValue();
+
+    return 0;
+}
